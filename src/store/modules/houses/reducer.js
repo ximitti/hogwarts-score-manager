@@ -8,10 +8,8 @@ const housesReducer = (state = houses, action) => {
     case "@houses/TABLE":
       return;
     default:
-      console.log("state inicial das casas :", state)
       return state;
   }
+};
 
-}
-
-export default housesReducer
+export default housesReducer;

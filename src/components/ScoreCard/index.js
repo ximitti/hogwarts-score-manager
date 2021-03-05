@@ -8,27 +8,40 @@ import {
   Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-// --------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
 const useStyles = makeStyles((theme) => ({
   root: {
     minWidth: 225,
-    marginRight: 10,
+    margin: 10,
+    backgroundColor: "#E5EDF2",
   },
   media: {
     height: 250,
   },
+  title: {
+    color: "#5777A8",
+  },
+  avatar: {
+    backgroundColor: "#5777A8",
+    color: "#E5EDF2",
+    paddingTop: "5px",
+    borderRadius: "10px",
+  },
 }));
 
-// --------------------------------------------------------------------------------------
-const ScoreCard = ({house}) => {
+// ---------------------------------------------------------------------------
+const ScoreCard = ({ house }) => {
   const classes = useStyles();
 
-  console.log(house)
   return (
     <Card className={classes.root}>
       <CardHeader
-        avatar={<Avatar>{"1"}</Avatar>}
-        title={house.name}
+        avatar={<Avatar className={classes.avatar}>{house.position}</Avatar>}
+        title={
+          <Typography className={classes.title} variant="h5">
+            {house.name}
+          </Typography>
+        }
       />
       <CardMedia
         className={classes.media}
@@ -36,7 +49,9 @@ const ScoreCard = ({house}) => {
         alt={house.name}
       />
       <CardContent>
-        <Typography variant="h4">{"500"}</Typography>
+        <Typography className={classes.title} variant="h4">
+          {house.score}
+        </Typography>
       </CardContent>
     </Card>
   );

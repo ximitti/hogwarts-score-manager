@@ -21,8 +21,12 @@ import { useState } from "react";
 //----------------------------------------------------------------------
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    marginBottom: 25,
+    width: "95%",
   },
+  appBorder: {
+    borderRadius: 10,
+  }
 }));
 //----------------------------------------------------------------------
 const MenuBar = () => {
@@ -45,7 +49,7 @@ const MenuBar = () => {
 
   return (
     <Box className={classes.root}>
-      <AppBar position="static">
+      <AppBar className={classes.appBorder} position="static">
         <Toolbar>
           <Box
             display="flex"
@@ -54,8 +58,12 @@ const MenuBar = () => {
             flexGrow={1}
             fontSize={{ xs: "subtitle1.fontSize", sm: "h5.fontSize" }}
           >
-            <Box mx={1.5}> 
-              <Avatar variant="square" alt="Hogwarts Shield" src="/images/logo_hogwarts.png" />
+            <Box mx={1.5}>
+              <Avatar
+                variant="square"
+                alt="Hogwarts Shield"
+                src="/images/logo_hogwarts.png"
+              />
             </Box>
             <Box>
               <Typography variant="inherit">Hogwarts Score Manager</Typography>
