@@ -10,8 +10,8 @@ const StudentsList = () => {
 
   return (
     <>
-      {students.map((student) => (
-        <Student student={student} />
+      {students.map((student, index) => (
+        <Student key={index} student={student} />
       ))}
     </>
   );

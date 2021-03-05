@@ -30,13 +30,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // ---------------------------------------------------------------------------
-const ScoreCard = ({ house }) => {
+const ScoreCard = ({ house, position }) => {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
       <CardHeader
-        avatar={<Avatar className={classes.avatar}>{house.position}</Avatar>}
+        avatar={<Avatar className={classes.avatar}>{position}</Avatar>}
         title={
           <Typography className={classes.title} variant="h5">
             {house.name}

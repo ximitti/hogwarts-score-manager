@@ -12,8 +12,8 @@ const ScoreList = () => {
 
   return (
     <>
-      {housesList.map((house) => (
-        <ScoreCard house={house} />
+      {housesList.map((house, index) => (
+        <ScoreCard key={index} house={house} position={index + 1} />
       ))}
     </>
   );

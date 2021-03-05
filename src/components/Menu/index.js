@@ -22,11 +22,11 @@ import { useState } from "react";
 const useStyles = makeStyles((theme) => ({
   root: {
     marginBottom: 25,
-    width: "95%",
+    width: "100%",
   },
   appBorder: {
-    borderRadius: 10,
-  }
+    borderRadius: 0,
+  },
 }));
 //----------------------------------------------------------------------
 const MenuBar = () => {

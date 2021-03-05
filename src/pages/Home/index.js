@@ -43,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: "rotate(180deg)",
   },
+  back: {
+    backgroundColor: "#E5EDF2",
+  },
 }));
 
 //----------------------------------------------------------------------
@@ -61,10 +64,12 @@ const Home = () => {
         image="/images/hogwarts_w1.jpg"
         title="Hogwarts Houses"
       />
-      <CardContent>
-        <Typography variant="h6" my={1}>Hogwarts Score Manager</Typography>
+      <CardContent className={classes.back}>
+        <Typography variant="h6" my={1}>
+          Hogwarts Score Manager
+        </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions className={classes.back}>
         <IconButton
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
@@ -77,7 +82,7 @@ const Home = () => {
         </IconButton>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
+        <CardContent className={classes.back}>
           <Typography>
             Bem vindos ao gerenciador de pontos de Hogwarts!
           </Typography>
